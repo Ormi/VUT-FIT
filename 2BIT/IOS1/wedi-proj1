@@ -1,0 +1,290 @@
+####################################
+#
+#	wedi (wrapper)
+#	First project for IOS
+#	Date: March 2015
+#	Author: Michal Ormos (xormos00)
+#
+####################################
+
+#!/bin/sh
+#!/bin/bash
+#!/bin/dash
+#!/bin/ksh
+
+export LC_ALL=C
+
+#WEDI_RC="wedi.rc"
+#export EDITOR=""
+#export VISUAL="vi"
+INTYPE="nothing"
+last_open_counter="1"
+
+##########################
+# Declaration of functions
+##########################
+
+#Saving data format $name $date $counter to $WEDI_RC, 3 columns
+function save_data {
+	fdate=`date +%Y%m%d%H%M%S`
+	open_counter=1
+	echo $file_name $fdate $base_file_name $open_counter >> $WEDI_RC
+}
+
+#Same as save_data but renew it
+function resave_data {
+	new_fdate=`date +%Y%m%d%H%M%S`
+	#cut 3 column, last amount of file opens and increment it
+	#in -w is exact match 'aaa is different from aaaa'
+	last_open_counter=`grep -w $file_name $WEDI_RC | cut -d" " -f4`
+	((last_open_counter=last_open_counter + 1))
+	#substitute fdate for new_fdate and increment open_counter
+	new_date=`awk '$1=="'$file_name'"{$2="'$new_fdate'"}1' "$WEDI_RC"`
+	echo "$new_date" >$WEDI_RC
+	new_counter=`awk '$1=="'$file_name'"{$4="'$last_open_counter'"}1' "$WEDI_RC"`
+	echo "$new_counter" >$WEDI_RC
+}
+
+function last_read_file {
+	last_read=`grep "$file_name " $WEDI_RC | sort -k2 | tail -n 1 | cut -d" " -f1`
+		file_name=$last_read
+		resave_data
+		$EDITOR $last_read
+}
+
+function last_nonsave_read_file {
+	last_read=`grep "$file_name " $WEDI_RC | sort -k2 | tail -n 1 | cut -d" " -f1`
+		$EDITOR $last_read
+}
+
+function most_open_file {
+	most_open=`grep "$file_name " $WEDI_RC | sort -k3 | tail -n 1 | cut -d" " -f1`
+		file_name=$most_open
+		resave_data
+		$EDITOR $most_open
+}
+
+function show_files {
+	sfiles=`grep "$file_name " $WEDI_RC | cut -d" " -f1`
+	echo "$sfiles"
+}
+
+#Check if files really exist and erase non exist files from $WEDI_RC
+function check_files {
+	counter=0 
+	cut -d" " -f1 $WEDI_RC | \
+
+	while read -r line ; do 
+		counter=$((counter + 1)) 
+		if ! [ -f $line ]; then 
+			healthy_files=`grep -v "$line" $WEDI_RC` 
+			echo "$healthy_files" >$WEDI_RC 
+			counter=$((counter - 1)) 
+		fi
+	done
+}
+
+function date_sort {
+	#read file line by line
+	while read line
+	do
+    	one_line=$line
+    	dvalue=`echo $line | cut -d" " -f3`
+
+    	#cut date from line and cut time from date format
+    	file_date=$(echo $one_line | cut -d" " -f2)
+    	file_date=${file_date::-6}
+		if [ "$dvalue" = "$file_name" ]; then
+      		 	if [ $INTYPE = "b" ]; then
+       				if [ $sort_date -ge $file_date ]; then
+       					foutput=`echo $one_line | cut -d" " -f1`
+       	       		 	foutput=${foutput##*/}
+        				echo $foutput
+       				fi
+       			fi
+
+       			if [ $INTYPE = "a" ]; then
+       				if [ $sort_date -le $file_date ]; then
+						foutput=`echo $one_line | cut -d" " -f1`
+						foutput=${foutput##*/}
+						echo $foutput
+       				fi
+     		  	fi
+		fi
+	done < $WEDI_RC
+exit 0
+}
+
+#Check if any files exist in directory
+function files_indir_check {
+	grep -q "$file_name " $WEDI_RC
+	if [ ! $? -ne 1 ];then
+		echo "Error - No files in directory" >&2
+		exit 1
+	fi
+}
+
+#Check if directory physicaly exist 
+function directory_check {
+	if [ ! -d "$file_name" ]; then
+		echo "Error Directory do not exist" >&2
+		exit 1
+	fi
+}
+
+#################################
+# End of declaration of functions
+#################################
+
+
+if [ -z $EDITOR ]; then
+	EDITOR=$VISUAL
+fi
+
+if [ -z $VISUAL ]; then
+	echo "Error Editor do not found" >&2
+	exit 1 
+fi
+
+#realpath_test=`realpath`
+type -a realpath > /dev/null
+if [ $? = '1' ]; then
+	echo "Realpath is missing on this machine" >&2
+	exit 1
+fi
+
+if [ -z $WEDI_RC ]; then
+	echo "Error - WEDI_RC do not found" >&2
+	exit 1
+fi	
+#If $WEDI_RC do not exist create it
+if [ ! -r "realpath $WEDI_RC" ]; then
+	touch $WEDI_RC
+fi
+
+#Allow pass maximally 3 arguments
+if [ "$#" -gt 3 ]; then
+    echo "Illegal number of parameters"
+    exit 1
+fi
+
+#No directory input
+if [ "$#" -eq 0 ]; then
+	INTYPE="directory"
+	1="pwd"
+fi
+
+check_files
+
+while getopts ":mlba:" arg ; do 
+	case "$arg" in 
+		m) INTYPE="m" ;; 
+		l) INTYPE="l" ;; 
+		b) INTYPE="b" ;; 
+		a) INTYPE="a" ;; 	
+		[?]) echo Bad input ;
+				exit 1   ;; 
+	esac 
+done
+
+#Detect if input is file or directory and make functions
+if [ $INTYPE = "nothing" ];then
+	if [ -f "$1" ]; then
+		INTYPE="file"
+	elif [ -d "$1" ]; then
+		INTYPE="directory"
+	else
+		touch $1
+		file_name=`realpath $1`
+		base_file_name=`realpath $file_name`
+		export base_file_name=${base_file_name%/*}
+		save_data
+		last_read_file
+		exit 0
+	fi
+fi
+
+
+if [ $INTYPE = "file" ]; then
+	file_name=`realpath $1`
+	base_file_name=`realpath $file_name`
+	export base_file_name=${base_file_name%/*}
+
+	#recognize if file is already in $WEDI_RC or not
+	# -q = quite , -w = pedancy
+	grep -q -w $file_name $WEDI_RC 
+	if [ $? -eq 1 ]; then
+		save_data
+	else
+		echo tu
+		resave_data
+fi
+
+last_nonsave_read_file
+exit 0;
+fi
+
+
+if [ $INTYPE = "directory" ]; then
+	file_name=`realpath $1`
+	grep -q "$file_name " $WEDI_RC
+	if [ $? -eq 0 ]; then
+		last_read_file
+	else
+		echo "Error - No files in directory" >&2
+		exit 1
+	fi
+	exit 0
+fi
+
+if [ $INTYPE = "m" ]; then
+	if [ -z $2 ]; then
+		file_name=`realpath`
+	else
+		file_name=`realpath $2`
+	fi
+
+directory_check
+files_indir_check
+most_open_file
+exit 0
+
+fi
+
+if [ $INTYPE = "l" ]; then
+	file_name=`realpath $2`
+		
+	directory_check
+	files_indir_check
+	show_files
+	exit 0
+fi
+
+# Date Block
+# Control if path is given or not. If not pwd
+if [ -z $3 ]; then
+		file_name=`realpath`
+	else
+		file_name=`realpath $3`
+fi
+directory_check
+files_indir_check
+#Make from input YYYY-MM-DD - YYYYMMDD
+sort_date=`echo $2 | tr -d -`
+if [ $INTYPE = "b" ]; then
+	date_sort
+fi
+
+if [ $INTYPE = "a" ]; then
+	date_sort
+fi
+# End Date Block
+
+echo "Error. Unexpected end of file" >&2
+exit 1 
+
+###############
+#
+# End of script
+#
+###############
