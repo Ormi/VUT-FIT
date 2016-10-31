@@ -10,9 +10,6 @@ IZP Project 3 Finding way in maze - 8/10
 
 2 BIT - Druhý semester
 
-IMA Domáca úloha 1 - 7/7
-IMA Domáca Úloha 2 - 7/7
-IMA Domáca úloha 3 - 7/7
 INC Prístupový terminál - 20/20
 IOS Projekt 1 Skripty 15/15
 IOS Projekt 2 Synchronizačný problém Rivercrossing 15/15
