@@ -1,7 +1,7 @@
 FIT-projects
-
+--------------------------------------------------------
 1 BIT - First Term
-
+--------------------------------------------------------
 IUS Project 2 Documantation to second IZP project - 8/10
 IUS Project 3 UML - 11/20
 IZP Project 1 Table Calculations - 3/5
