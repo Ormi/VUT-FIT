@@ -1,0 +1,30 @@
+IPK Pojekt 2
+Sprava suborov
+
+Autor: xormos00 | Ormos Michal
+email: xormos00@stud.fit.vutbr.cz
+
+Tento program sluzi pre prenos suborov medzi klientom a serverom.
+Program vyuziva sockety API a protkol TCP.
+
+Puzitie:
+Proram sa sklada zo server a klienta.
+Server sa spusti prave raz a obsluhuje klienty.
+Klienti sa spustaju postupne a prevedu prave jednu poziadavku.
+Klienty posielaju poziadavky na odosielanie a stahovanie suborov.
+
+server:
+./server -p [cislo_portu]
+
+client:
+./client -p [cislo_portu] -h [nazov_servera] [-d [subor_na_stiahnutie]]/[-u [subor_na_odoslanie]]
+Prava jeden z parametrov -u, -d je povinny
+
+Priklady pouzitia:
+./server -p 1999
+./client -p 1999 -h localhost -d text_file.txt
+./client -p 1999 -h localhost -u obrazok.png
+
+./server -p 1999
+./client -p 1999 -h eva -d dir/file.h
+./client -p 1999 -h eva -u dir/head.h
