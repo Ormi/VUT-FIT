@@ -53,18 +53,3 @@ IPK Project 2 Transferring files - 15/15
 IPP Project 2 CSV to XML in Python3 - 10/10  
 IZG Project Vykreslenie priehľadných 3D modelov - 14/18  
 IJA Project Game Reversi(Othelo)  
-  
-5 BIT - Piaty semester  
----------------------
-IIS Informačný systém Zoologickej záhrady https://github.com/Raiper34/IIS-ZOO   
-IMP Simulácia v CW Svetelné hodiny - 14/14  
-IMS Aplikácia celulárnych automatov v biológií https://github.com/Raiper34/IMS-Simulation    
-ISA Jednoduchý SNMP manager - 17/15  
-ITU Hodiny https://github.com/Raiper34/ITU-Clock  
-
-6 BIT - Šiesty semester  
----------------------
-ITW Projekt 1 - 20/20   
-ITW Projekt 2 - 30/30  
-IW5 Správa filmov https://github.com/Raiper34/IW5-Movies  
-IBP https://github.com/Raiper34/Bakalarska-praca-text 
