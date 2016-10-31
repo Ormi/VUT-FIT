@@ -21,11 +21,11 @@ INC Access terminal - 17/20
 IOS Projekt 1 File Wrapper and Monitor 13/15  
 IOS Projekt 2 Demonstrating forking processes synchronization via semaphores and sh…
  14/15  
-//ITY Projekt 1 Hľadká a zmiešaná sadzba 10/10  
-//ITY Projekt 2 Sadzba matematických výrazov - 10/10  
-//ITY Projekt 3 Sadzba tabuliek a obrázkov - 10/10  
-//ITY Projekt 4 Bibliografické citácie - 10/10  
-//ITY Projekt 5 Tvorba prezentácií - 10/10  
+ITY Projekt 1 Hľadká a zmiešaná sadzba 9/10  
+ITY Projekt 2 Sadzba matematických výrazov - 14/15  
+ITY Projekt 3 Sadzba tabuliek a obrázkov - 13/15  
+ITY Projekt 4 Bibliografické citácie - 15/15  
+ITY Projekt 5 Tvorba prezentácií - 15/10  
 
 3 BIT - Third Term  
 ----------------------
