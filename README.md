@@ -42,8 +42,8 @@ ISS Projekt Processing with graphics via Matlab - 10/12
 4 BIT - Fourth Term  
 ----------------------
 IDS - Database systems(SQL)  
-IPK - Computer Communications and Networks(C/C++)
-IPP - Principles of Programming Languages(Python3) 
+IPK - Computer Communications and Networks(C/C++)  
+IPP - Principles of Programming Languages(Python3)  
 IZG -	Computer Graphics Principles(C++)  
 IJA - Java Programming language(Java)  
   
