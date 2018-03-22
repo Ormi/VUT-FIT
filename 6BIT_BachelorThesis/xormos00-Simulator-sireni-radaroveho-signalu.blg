@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (Web2C 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: xormos00-Simulator-sireni-radaroveho-signalu.aux
+The style file: bib-styles/czechiso.bst
+Database file #1: xormos00-Simulator-sireni-radaroveho-signalu-20-literatura-bibliography.bib
+Warning--entry type for "radarsensing" isn't style-file defined
+--line 128 of file xormos00-Simulator-sireni-radaroveho-signalu-20-literatura-bibliography.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--to sort, need author or key in undestandingfft
+Warning--to sort, need author or key in flexradio
+You've used 18 entries,
+            3151 wiz_defined-function locations,
+            746 strings with 7934 characters,
+and the built_in function-call counts, 5605 in all, are:
+= -- 348
+> -- 114
+< -- 0
++ -- 50
+- -- 32
+* -- 242
+:= -- 648
+add.period$ -- 36
+call.type$ -- 18
+change.case$ -- 63
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 595
+empty$ -- 661
+format.name$ -- 32
+if$ -- 1222
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 152
+newline$ -- 70
+num.names$ -- 32
+pop$ -- 375
+preamble$ -- 1
+purify$ -- 52
+quote$ -- 0
+skip$ -- 187
+stack$ -- 0
+substring$ -- 112
+swap$ -- 252
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 58
+warning$ -- 2
+while$ -- 32
+width$ -- 20
+write$ -- 161
+(There were 3 warnings)

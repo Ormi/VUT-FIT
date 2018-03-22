@@ -1,0 +1,40 @@
+\select@language {slovak}
+\contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Teoretick\IeC {\'a} \IeC {\v c}as\IeC {\v t}}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Radar}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Delenie radarov}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Z\IeC {\'a}kladne \IeC {\v c}asti radaru}{5}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Charakteristika modulu K-MC4}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Z\IeC {\'a}kladn\IeC {\'e} vlastnosti radarov\IeC {\'e}ho modulu\cite {kmc4sheet}:}{7}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Doplerov jav}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Radarov\IeC {\'a} rovnica}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Spracovanie sign\IeC {\'a}lu}{10}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Vzorkovanie a Kvantovanie}{10}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Odstr\IeC {\'a}nenie jednonosmernej zlo\IeC {\v z}ky}{11}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Segment\IeC {\'a}cia}{11}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Zero-padding}{12}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Frekven\IeC {\v c}n\IeC {\'a} anal\IeC {\'y}za}{12}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {2.5.6}Interpol\IeC {\'a}cia}{13}{subsection.2.5.6}
+\contentsline {section}{\numberline {2.6}Modelovanie a simul\IeC {\'a}cia}{14}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Princ\IeC {\'\i }py}{14}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Diskr\IeC {\'e}tny syst\IeC {\'e}m a simul\IeC {\'a}cia}{15}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Simulovanie \IeC {\v c}innosti radaru}{15}{subsection.2.6.3}
+\contentsline {chapter}{\numberline {3}N\IeC {\'a}vrh}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}Radar v priestore}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Objekt v priestore}{17}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Vertik\IeC {\'a}lny uhol}{18}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Horizont\IeC {\'a}lny uhol}{18}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Simul\IeC {\'a}cia \IeC {\'u}tlmu sign\IeC {\'a}lu}{19}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Priestorov\IeC {\'y} uhol}{19}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Vzdialenos\IeC {\v t}}{19}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Prijat\IeC {\'y} sign\IeC {\'a}l}{20}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Radarov\IeC {\'a} rovnica}{20}{subsection.3.2.7}
+\contentsline {chapter}{\numberline {4}Implement\IeC {\'a}cia}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Charakteristika ant\IeC {\'e}ny}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Simul\IeC {\'a}cia modelovanej sc\IeC {\'e}ny}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Reprezent\IeC {\'a}cia d\IeC {\'a}t}{25}{section.4.3}
+\contentsline {chapter}{\numberline {5}Testovanie a v\IeC {\'y}sledky}{26}{chapter.5}
+\contentsline {chapter}{\numberline {6}Z\IeC {\'a}ver}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Zhodnotenie v\IeC {\'y}sledkov}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}Dal\IeC {\v s}ie pokra\IeC {\v c}ovanie pr\IeC {\'a}ce}{27}{section.6.2}
+\contentsline {chapter}{Literat\IeC {\'u}ra}{28}{chapter*.2}

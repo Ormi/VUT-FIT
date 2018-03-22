@@ -1,0 +1,77 @@
+\chapter{Doplerov jav}
+Doplerov efekt popisuje zmenu velnovej dlžky príjmaného signálu voči signálu vysielanému. Čo je spôsobené nenulovou vzájomnou rýchlosťou prímača a vysielača.
+Tento jav nastáva len pri zvuku, no obecne je pozorovateľný pre ľubovolné elektromagnetické vlnenie.
+
+\cite(ref:radarsystemmatlab)
+
+\chapter{Spracovanie signálov}
+Výstup radaru reprezentuje analógový signál, ktorý odpovedá frekvencii generovanej pohybujucími sa objektami pred radarom. Cieľom spracovania signálu je prevedenie frekvenčnej analýzy, ktorej výstupom su užitočné informácie o objekte ako napríklad jeho rýchlosť a vzdialenosť.
+
+Pred samotnou úpravou signálu je potreba ho zdigitalizovať pomocou A/D prevodníku. Proces prevodu signálu z analógovej podoby do digitálnej je možné rozdeliť na 2 procesy.
+
+\subsection{Vzorkovanie}
+Vzorkovanie môžeme vysvetliť ako násobenie pôvodného signálu sledom periodických obdlžníkov nenulovej šírky(Dirakových impulzov). Je potrebné tieto impulzy navrhnúť tak, aby nevzniklo skreslenie spôsobené zvolenou šírkou obdlžníka.
+Násobenie signálu v čase odpovedá konvolúcii ich spektier. 
+
+F_{S} = frac_{1}{T}
+
+Ak bude vzorkovacia frekvencia príliš nízka, budú sa jednotlivé kópie pôvodného spektra prekrývať. V takom prípade nebudeme môcť navzorkovaný signál rekonštruovať späť do pôvodne podoby. To sa označuje ako antiliasing. Aby sme tomu zabránili musíme dodržať vzorkovací teorém:
+
+F_{S} > 2 f_{max}
+Maximálna frekvencia signálu musí byť nižšia než polovica vzorkovaciej frekvencie.
+
+\subsection{Kvantovanie}
+Kvantovanie je diskretizácia oboru hodnôt signálu. Vždy je to proces strátový a nezvratný. Podstatou jeho činnosti je zaokrúhlenie hodnôt navzorkovaného sginálu na predom definované kvantizačné hladiny.
+
+\subsection{Odstránenie jednonosmernej zložky}
+Jednosmerná zložka, ako jej názov napovedá nenesie žiadnu užitočnú informáciu, práve naopak nám môže pri dalších výpočtoch rušiť. Jej odstránenie prevedieme odčítaním strednej hodnoty, ktorú môžme vypočítať jednoduchým priemerovaním po ukončení signálu:
+
+s s ciatkou = 1 lomeno N Sigma n=1  nad N s[n]
+
+obrazky?
+
+\subsection{Segmentácia}
+Segmentácia signálu je jeho delenie na menšie časti - rámce. Rámce sú úseky signálu, rozdelené z pôvodného signálu. Toto rozdelenie potrebujeme pre dalšie zpracovanie.
+Dlžka rámcov by mala byť taká malá aby bolo možné pokladať signál na danom úseku za stacionárny a rovnaka taká veľká, aby sme mohli čo najpresnejšie odhadnúť požadované parametry.
+Dlžka rámce sa často volí ako mocnina čisla dvojkou
+
+\subsection{Okenná funkcia}
+Slúži pre vystrihnutie rámca pomocou okna
+
+=Hammingovo okno = 
+=Hanningovo okno = 
+
+\subsection{Frekvenčná analýza}
+
+\includeimage adprevod.png
+
+
+
+
+
+
+
+
+======================
+
+
+Prezentacia
+
+
+[slajd1]
+Radar
+
+[slajd2]
+Teória Radarov
+
+[slajd3]
+Sprac. signálov
+
+[slajd4]
+Simulácia
+
+[slajd5]
+Návrh
+
+[slajd6]
+Záver

@@ -1,0 +1,87 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{flexradio}
+DSP Window Functions in PowerSDR. FlexRadio Systems Knowledge Center 2009,
+  [Online; citované 20.01.2017].
+\newline\urlprefix\url{http://kc.flex-radio.com/KnowledgebaseArticle50439.aspx}
+
+\bibitem{undestandingfft}
+Understanding FFTs and Windowing. National Instruments 2017, [Online; citované
+  20.01.2017].
+\newline\urlprefix\url{http://download.nicom/evaluation/pxi/Understanding%20FFTs%20and%20Windowing.pdf}
+
+\bibitem{inmopora}
+Břetislav~Fajmon, I.~H.: Numerická matematika a pravděpodobnost. 2014,
+  [Online; citované 20.01.2017].
+
+\bibitem{radarimage}
+Hicks, J.~L.: Radar Principles. 1998, [Online; citované 12.01.2017].
+\newline\urlprefix\url{hhttp://www.rfcafe.com/references/electrical/NEETS-Modules/NEETS-Module-18-1-11-1-20.htm}
+
+\bibitem{undestandingsignals}
+Lyons, R.~G.: \emph{Understanding digital signal processing}. 1rd ed. Pearson
+  Education, 1996, ISBN ISBN 0-201-63467-8.
+
+\bibitem{understandingsignals}
+Lyons, R.~G.: \emph{Understanding Digital Signal Processing}. Prentice Hall
+  PTR, 2001, ISBN 0-201-63467-8.
+
+\bibitem{radarmatlab}
+Mahafza, B.~R.: \emph{Radar Systems Analysis and Desing Using MATLAB}. Chapman
+  and Hall/CRC, 2000, ISBN 1-58488-182-8.
+
+\bibitem{imsopora}
+Peringer, P.: Modelování a simulace, studijní opora. FIT VUT v Brne, 2012,
+  [Online; citované 13.01.2017].
+
+\bibitem{kmc4sheet}
+RFbeam: K-MC4 Monopulse Radar Transceiver Datasheet. Jan 2013, [Online;
+  citované 12.01.2017].
+\newline\urlprefix\url{https://www.rfbeam.ch/files/products/18/downloads/Datasheet_K-MC4.pdf}
+
+\bibitem{radarsystem}
+Ridenour, L.~N.: \emph{Radar system engineering}. Dover, 1965.
+
+\bibitem{radarsystemproc}
+Sen M~Kuo, B. H.~L.: \emph{Real-Time Digital Signal Processing}. OHNWILEY and
+  SONS, LTD, 2001, ISBN 0-470-84137-0.
+
+\bibitem{radarhandbook}
+Skolnik, M.: \emph{Radar Handbook}. New York : McGraw-Hill Professional, 2008,
+  ISBN 978-0071485470.
+
+\bibitem{radarsystems}
+Skolnik, M.~I.: \emph{Introduction to Radar Systems}. McGraw-Hill book company,
+  1981, ISBN 0-07-066572-9.
+
+\bibitem{radarsensing}
+Weidmann, W.: Radar Sensing and Detection of Moving and Stationary Objects.
+  April 2017,
+  \url{http://www.innosent.de/fileadmin/media/dokumente/Downloads/Application_Note_I_-_web.pdf/}.
+
+\bibitem{radartutor}
+Wolff, C.: Radar Tutorial. [Online; citované 12.01.2017].
+\newline\urlprefix\url{http://www.radartutorial.eu/index.en.html}
+
+\bibitem{radarbeam}
+Yuefei~Zeng, U.~B.: Radar Beam Tracing Methods Based on Atmospheric Refractive
+  Index. [Online; citované 24.01.2017].
+\newline\urlprefix\url{http://journals.ametsoc.org/doi/pdf/10.1175/JTECH-D-13-00152.1}
+
+\bibitem{zreopora}
+Černocký, J.: Zpracování řečových signálů — studijní opora. Dec
+  2006, [Online; citované 14.01.2017].
+
+\bibitem{issslajdy}
+Černocký, J.: Signály a systémy, študijné materiály k predmetu. FIT VUT
+  v Brne, 2015, [Online; citované 20.01.2017].
+
+\end{thebibliography}
