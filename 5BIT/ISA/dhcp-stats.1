@@ -1,0 +1,44 @@
+.\" Manpage for DHCP Monitor.
+.\" Contact xormos00@stud.fit.vutbr.cz to correct errors or typos.
+.TH man 3 "13 Nov 2016" "1.0" "DHCP Monitor man page"
+.SH NAZOV
+dhcp-stats \- Vytavara statistiky o vytazenosti siete.
+.SH POUZITIE
+dhcp-stats [-c <int>] [-i <interface>] <ip-prefix> [ <ip-prefix> [ ... ] ]
+.IP ip-prefix
+Rozsah siete pre ktory sa bude generovat statisitka,
+.PP
+Napr. ./dhcp-stats 192.168.0.0/24 192.168.0.0/23 192.168.0.0/25.
+.PP
+Tvar ip prefixu je striktne X.X.X.X/XX.
+.SH POPIS
+dhcp-stats je modul, ktory pomoze sietovemu administratorovi ziskat statistiky o vytazenosti sietoveho prefixu.
+Riesi situaciu, kedy DHCP server nepodporuje moznost ziskat tento typ statistik a preto je nutne monitorovat DHCP provoz.
+.PP
+Zachytava spravy ACK, podla ktorym zistuje ci dana IPv4 adresa patri k niektorej sieti o ktoru je poziadane monitorovanie. Nasledne je pridana spolu s jej lease time do statistik, pre kazdy monitorovanu siet pod ktoru patri. Odobrana je v pripade, ze jej vypris lease time, alebo sa zachyti RELEASE sprava na danu IPv4 adresu, teda klient sa uvolni sam.
+.SH NASTAVENIA
+.IP -c
+Vypisuje statistiky do suboru log.csv kazdy <int> sekund, vo formate CSV. Inak sa implicitne vypisuje na terminal pomocou kniznice ncurse.
+.IP -i
+Volba rozhrania (napr. vyber pomocou `ip addr`). Implicitne vyberie prve aktivne rozhranie.
+.PP
+.SH POZRI TIEZ
+ip(8), dhcpdump(1)
+.SH CHYBY
+Nepodporuje odpocuvanie na vsetkych rozhraniach.
+.PP
+Monitoruje DHCP komunikaciu od chvile spustenia, zanedbava adresy v sieti pred svojim spustenim.
+.PP
+Funguje iba pre IPv4 adresy.
+.PP
+Dalsie zistene chyby hlaste prosim autorovi.
+.SH PRIKLADY POUZITIA
+ ./dhcp-stats 192.168.0.0/24
+.PP
+ ./dhcp-stats -i wlp4s0 192.168.0.0/24 192.168.0.0/23
+.PP
+ ./dhcp-stats -c 2 192.168.0.0/24 192.168.0.0/23
+.PP
+ ./dhcp-stats -c 2 -i wlp4s0 192.168.0.0/24 192.168.0.0/23 192.168.0.0/25
+.SH AUTOR
+Ormos Michal (xormos00@stud.fit.vutbr.cz)

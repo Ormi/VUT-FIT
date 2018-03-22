@@ -1,0 +1,3 @@
+Pre spravne fungovanie a preklad programu je potreba doinstalovat na referencny stroj CentOS:
+  kniznicu ncurse
+    `sudo yum install ncurses-devel`
