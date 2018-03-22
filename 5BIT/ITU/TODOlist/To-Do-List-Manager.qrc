@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/icon.png</file>
+        <file>images/button.png</file>
+        <file>images/button-blue.png</file>
+        <file>images/button-blue-1.png</file>
+        <file>images/button-grey.png</file>
+        <file>images/button-red.png</file>
+        <file>images/icon-green.png</file>
+        <file>images/icon-red.png</file>
+        <file>images/button-green.png</file>
+        <file>sounds/alarm.wav</file>
+    </qresource>
+</RCC>
