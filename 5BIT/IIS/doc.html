@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<h1>Veterinárna klinika</h1>
+
+<dl>
+	<dt>Autori</dt>
+	<dd>Ľubomír Gallovič
+	    <a href="mailto:xgallo03@stud.fit.vutbr.cz">xgallo03@stud.fit.vutbr.cz</a>
+	</dd>
+	<dd>Michal Ormoš
+	    <a href="mailto:xormos00@stud.fit.vutbr.cz">xormos00@stud.fit.vutbr.cz</a>
+	</dd>
+	<dt>URL aplikace</dt>
+  <dd><a href="http://www.stud.fit.vutbr.cz/~xgallo03/xxx/">http://www.stud.fit.vutbr.cz/~xgallo03/IIS/</a></dd>
+	<dd><a href="http://www.stud.fit.vutbr.cz/~xormos00/IIS/">http://www.stud.fit.vutbr.cz/~xormos00/IIS/</a></dd>
+</dl>
+
+<h2>Užívatelia systému pre testovanie</h2>
+<table>
+<tr><th>Login</th><th>Heslo</th><th>Pozícia</th></tr>
+<tr><td>doktor1</td><td>doktor</td><td>Zamestnanec - doktor Matej Dzurov</td></tr>
+<tr><td>doktor2</td><td>doktor</td><td>Zamestnanec - doktor Matej Bielik</td></tr>
+<tr><td>sestra1</td><td>sestra</td><td>Zamestnanec - sestra Jana vesela</td></tr>
+</table>
+
+<h2>Implementácia</h2>
+<table>
+  <tbody>
+  <tr>
+    <td>db_init.php</td>
+    <td>Inicializácia a vytvorenie spojenia s databázov.<br></td>
+  </tr>
+  <tr>
+    <td>editovat_davkovanie_zvierata.php<br>odstranit_davkovanie_zviera.php<br>pridat_davkovanie_zviera_potvrdenie.php<br>zobazit_davkovanie_zviera.php<br>pridat_davkovanie_zviera.php</td>
+    <td>Práca s tabuľkou dávkovanie. Zobrazenie, pridávanie, editácia a odstránenie.</td>
+  </tr>
+  <tr>
+    <td>editovat_davkovanie.php<br>odstranit_davkovanie.php<br>pridat_davkovanie_potvrdenie.php<br>pridat_davkovanie.php</td>
+    <td>Správa dávkovania.</td>
+  </tr>
+  <tr>
+    <td>editovat_liecbu.php<br>odstranit_liecbu.php<br>pridat_liecbu_potvrdenie.php<br>pridat_liecbu.php<br>zobazit_liecbu.php</td>
+    <td>Správa liečby.</td>
+  </tr>
+  <tr>
+    <td>editovat_liek.php<br>hladat_liek<br>odstranit_liek.php<br>pridat_liek_potvrdenie.php<br>pridat_liek.php<br>zobazit_liek.php<br>zoznam_liekov.php</td>
+    <td>Správa lieku.<br>Prepojená s liečbou.</td>
+  </tr>
+  <tr>
+    <td>editovat_majitela.php<br>hladat_majitela.php<br>odstranit_majitela.php<br>pridat_majitela_potvrdenie.php<br>pridat_majitela.php<br>zobazit_majitela.php<br>zoznam_majitelov.php</td>
+    <td>Správa majiteľa. Práva pre prístup ma jedine zamestnanec - doktor.</td>
+  </tr>
+  <tr>
+    <td>editovat_zamestnanca.php<br>hladat_zamestnanca<br>odstranit_zamestnanca.php<br>pridat_zamestnanca_potvrdenie.php<br>pridat_zamestnanca.php<br>zobazit_zamestnanca.php<br>zoznam_zamestnancov.php</td>
+    <td>Správa zamestnanca.</td>
+  </tr>
+  <tr>
+    <td>editovat_zviera.php<br>hladat_zviera<br>odstranit_zviera.php<br>pridat_zviera_potvrdenie.php<br>pridat_zviera.php<br>zobazit_zviera.php</td>
+    <td>Správa zvieraťa. Hľadanie, pridávanie, editovanie a odstránenie.<br>Prepojenie s dávkovaním a liečbou.</td>
+  </tr>
+  <tr>
+    <td>index.php</td>
+    <td>Okno prihlásenia do systému.<br></td>
+  </tr>
+  <tr>
+    <td>login.php</td>
+    <td>Skripty pre prihlásenie, detekciu eistujúceho prihlásnia a odhlásenie.<br></td>
+  </tr>
+  <tr>
+    <td>portal.php</td>
+    <td>Hlavné skripty pre prácu a ovládanie menu.<br></td>
+  </tr>
+  <tr>
+    <td>menu1.html</td>
+    <td>Dizajn top baru a inicializacia html headerov.<br></td>
+  </tr>
+</tbody></table>
+
+<p>
+Implementované boli všetky prípady užitia vytvorené v rámci projektu pre predmet IUS a následné použité v predmete IDS.
+Z hľadiska požiadavkov na projekt do predmetu IIS boli taktiež splnené všetky.
+Pri implementácii neboli využité  žíadne frameworky a všetká funkcionalita bola vytvorená autormi pomocou jazykov HTML, CSS, PHP, JavaScript a SQL. Pre dizajn bola použitá verejná CSS knižnica Bootsrap.
+
+Databázový systém je mierne odlšný od toho vytvoreného pro predmet IDS.
+Odstránená bola pomocná tabuľka zaobstará pre spojenie liečby a zamestnanca.
+V tabuľke zamestnanec pribudli atribúty <em>meno</em> a <em>heslo</em> pre prihlásenie a bol upravený formát rodného čísla.
+</p>
+
+<h2>Inštalácia</h2>
+<ul>
+<li>Inštalácia prebieha prekopírovaním súborov na server do cieľovej zložky, vytvorením složky <em>tmp</em> so zapisovými právami pre session prihlásenia a zmenou konfiguračného súboru <em>db_init.php</em> na správne hodnoty.</li>
+<li>Stránky nevyžadujú špecialný software a konfigurácia na servere EVA je dostačujúca - PHP 5.3.3 a MySQL 5.6.33</li>
+<li>Databáza sa inicializuje skriptom <em>dq.sql</em>, ktorý je možné importovať cez systém phpMyAdmin.</li>
+</ul>
+
+<h2>Známe problémy</h2>
+<p>Nebola implementovaná plná správa uživateľov administrátorom z dôvodu čiastočnej implementácie v rámci funkcie doktora.
+Prípadná implementácia by teda bola duplicitonu, len by se zmenila funkcia, z kterej by bola prístupná.</p>
+
+</body>
+</html>

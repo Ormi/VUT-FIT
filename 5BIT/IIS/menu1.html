@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso8859-2" />
+<title>Mazo</title>
+<link rel="icon" href="./img/logo.png">
+<link rel="stylesheet" type="text/css" href="signin.css" />
+<link href="bootstrap.min.css" rel="stylesheet">
+<link href="dashboard.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="main_container">
+	<div id="header">
+		<!-- <div class="logo"><img src="img/logo.png" border="0" alt="" title="" /></div> -->
+		<script>
+		function updateTimeInfo()
+		{
+				var time = new Date();
+				var hours = time.getHours().toString();
+				var minutes = time.getMinutes().toString();
+				var seconds = time.getSeconds().toString();
+				var days = time.getDate().toString();
+				var months = (time.getMonth()+1).toString();
+				var year = time.getFullYear().toString();
+
+				if(parseInt(hours) < 10)
+						hours = "0"+hours.toString();
+				if(parseInt(minutes) < 10)
+						minutes = "0"+minutes.toString();
+				if(parseInt(seconds) < 10)
+						seconds = "0"+seconds.toString();
+				if(parseInt(days) < 10)
+						days = "0"+days.toString();
+				if(parseInt(months) < 10)
+						months = "0"+months.toString();
+
+				document.getElementById("time").innerHTML = hours+":"+minutes+":"+seconds;
+				document.getElementById("date").innerHTML = days+"."+months+"."+year;
+		}
+		setInterval(updateTimeInfo,1000);
+		</script>
+		</div>
+		</body></html>
