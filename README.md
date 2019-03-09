@@ -56,14 +56,14 @@ IJA Project Game Reversi(Othelo)
 
 5 BIT - Fifth Term  
 ----------------------
-IIS	- Information Systems
-IMP - Microprocessors and Embedded Systems
-IMS - Modelling and Simulation 
-IPZ	- Peripheral Devices 
-ISA	- Network Applications and Network Administration 
-ITU	- User Interface Programming
-ISP	- Term Project
-JS1	- Spanish for Beginners 1/2
+IIS	- Information Systems  
+IMP - Microprocessors and Embedded Systems  
+IMS - Modelling and Simulation   
+IPZ	- Peripheral Devices   
+ISA	- Network Applications and Network Administration   
+ITU	- User Interface Programming  
+ISP	- Term Project  
+JS1	- Spanish for Beginners 1/2  
   
 IIS Project Advanced information system - 28/30    
 IMS Project Implementation of microcontroler HCS08 in Freescale Codewarrior - 14/14  
@@ -73,7 +73,7 @@ ISP Project Radar Signal Diffusion Simulator - 68/100
 
 6 BIT - Sixth Term  
 ----------------------
-IBP	- Bachelor's Thesis
+IBP	- Bachelor's Thesis  
 JS1	- Spanish for Beginners 2/2
 
 IBP - Radar Signal Diffusion Simulator - A/C
