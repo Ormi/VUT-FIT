@@ -53,3 +53,27 @@ IPK Project 2 Transferring files - 15/15
 IPP Project 2 CSV to XML in Python3 - 10/10  
 IZG Project Vykreslenie priehľadných 3D modelov - 14/18  
 IJA Project Game Reversi(Othelo)  
+
+5 BIT - Fifth Term  
+----------------------
+IIS	- Information Systems
+IMP - Microprocessors and Embedded Systems
+IMS - Modelling and Simulation 
+IPZ	- Peripheral Devices 
+ISA	- Network Applications and Network Administration 
+ITU	- User Interface Programming
+ISP	- Term Project
+JS1	- Spanish for Beginners 1/2
+  
+IIS Project Advanced information system - 28/30    
+IMS Project Implementation of microcontroler HCS08 in Freescale Codewarrior - 14/14  
+ISA Project Monitoring of DHCP comunication - 10/15  
+ITU Project Team project of TODOList application aimed for user interace - 44/55  
+ISP Project Radar Signal Diffusion Simulator - 68/100
+
+6 BIT - Sixth Term  
+----------------------
+IBP	- Bachelor's Thesis
+JS1	- Spanish for Beginners 2/2
+
+IBP - Radar Signal Diffusion Simulator - A/C
